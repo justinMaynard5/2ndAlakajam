@@ -1,8 +1,7 @@
-/Alakajam/[Ll]ibrary/
-/Alakajam/[Tt]emp/
-/Alakajam/[Oo]bj/
-/Alakajam/[Bb]uild/
-/Alakajam/[Bb]uilds/
+/Alakajam/Library/
+/Alakajam/Temp/
+/Alakajam/Obj/
+/Alakajam/Builds/
 
 # Visual Studio 2015 cache directory
 /Alakajam/.vs/
