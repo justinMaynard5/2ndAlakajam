@@ -22,7 +22,11 @@ public class ToggleView : MonoBehaviour {
         {
             visibleLayer.Value = 1;
         }
+        else if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            visibleLayer.Value = 2;
+        }
     }
 }
 
-public enum BlockColors { Green, Red };
+public enum BlockColors { Green, Red, Blue };

@@ -8,6 +8,8 @@ public class Disable : MonoBehaviour {
     public BlockColors color;
     public Collider col;
     public MeshRenderer mesh;
+    public Rigidbody rb;
+    public MonoBehaviour[] scripts;
 
     // Use this for initialization
     void Awake ()
@@ -15,7 +17,7 @@ public class Disable : MonoBehaviour {
         visibleLayer.changedValue += changedValue;	
 	}
 
-    void changedValue(int num)
+    public void changedValue(int num)
     {
         if((int)color == num)
         {
@@ -27,9 +29,23 @@ public class Disable : MonoBehaviour {
         }
     }
 
-    void Switch(bool isOn)
+    public void Switch(bool isOn)
     {
         col.enabled = isOn;
         mesh.enabled = isOn;
+
+        if (rb != null)
+        {
+            rb.useGravity = isOn;
+            rb.isKinematic = !isOn;
+        }
+            
+        if (scripts != null)
+        {
+            foreach (MonoBehaviour script in scripts)
+            {
+                script.enabled = isOn;
+            }
+        }
     }
 }
