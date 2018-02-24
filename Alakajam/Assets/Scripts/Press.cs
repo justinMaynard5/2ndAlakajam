@@ -15,8 +15,10 @@ public class Press : MonoBehaviour {
 
             if (Physics.Raycast(ray,out hit))
             {
+                Debug.Log("Hit");
                 if (hit.collider.CompareTag("Toggle"))
                 {
+                    Debug.Log("toggle");
                     hit.collider.GetComponent<Switch>().Toggle();
                 }
             }

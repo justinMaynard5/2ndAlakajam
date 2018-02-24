@@ -10,6 +10,7 @@ public class Switch : MonoBehaviour {
 
 	public void Toggle()
     {
+        Debug.Log("Toggled");
         if (isOn)
         {
             isOn = false;

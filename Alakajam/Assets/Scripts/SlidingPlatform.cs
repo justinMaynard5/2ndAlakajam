@@ -8,11 +8,20 @@ public class SlidingPlatform : MonoBehaviour {
     public Switch toggel;
 
     bool isMoving;
+    public bool noSwitch;
     int currentWaypoint;
 
     private void Start()
     {
-        toggel.Toggled += Toggle;
+        if (toggel != null && !noSwitch)
+        {
+            toggel.Toggled += Toggle;
+        }
+
+        if (noSwitch)
+        {
+            isMoving = true;
+        }
     }
 
     // Update is called once per frame
@@ -34,6 +43,7 @@ public class SlidingPlatform : MonoBehaviour {
 
     void Toggle(bool isOn)
     {
+        Debug.Log("Start Move");
         isMoving = isOn;
     }
 }
