@@ -121,6 +121,8 @@
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_SceneMeshRender.cs" />
     <Compile Include="Assets\ProCore\ProGrids\Classes\pg_Util.cs" />
     <Compile Include="Assets\ProCore\ProGrids\MonoBehaviour\pg_IgnoreSnap.cs" />
+    <Compile Include="Assets\Scripts\Collectable.cs" />
+    <Compile Include="Assets\Scripts\CollectedColors.cs" />
     <Compile Include="Assets\Scripts\Disable.cs" />
     <Compile Include="Assets\Scripts\DisablingLigh.cs" />
     <Compile Include="Assets\Scripts\GlobalInt.cs" />
@@ -130,6 +132,7 @@
     <Compile Include="Assets\Scripts\SlidingPlatform.cs" />
     <Compile Include="Assets\Scripts\StickToPlatform.cs" />
     <Compile Include="Assets\Scripts\Switch.cs" />
+    <Compile Include="Assets\Scripts\ToggleLight.cs" />
     <Compile Include="Assets\Scripts\ToggleView.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01.cs" />
     <Compile Include="Assets\TextMesh Pro\Examples &amp; Extras\Scripts\Benchmark01_UGUI.cs" />
