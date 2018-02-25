@@ -7,6 +7,9 @@ public class Restart : MonoBehaviour {
 
     public CollectedColors colors;
     public GlobalInt visible;
+    public GameObject canvas;
+    public GameObject endScreen;
+    public MonoBehaviour control;
 
 	public void RestartGame()
     {
@@ -18,5 +21,12 @@ public class Restart : MonoBehaviour {
     public void Quit()
     {
         Application.Quit();
+    }
+
+    public void Play()
+    {
+        canvas.SetActive(false);
+        endScreen.SetActive(true);
+        control.enabled = true;
     }
 }
