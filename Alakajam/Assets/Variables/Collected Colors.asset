@@ -11,6 +11,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: acc303ada07bf3442ab49f8f25610eb9, type: 3}
   m_Name: Collected Colors
   m_EditorClassIdentifier: 
-  green: 0
+  green: 1
   red: 1
-  blue: 0
+  blue: 1

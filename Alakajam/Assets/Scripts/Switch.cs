@@ -7,6 +7,7 @@ public class Switch : MonoBehaviour {
     public System.Action<bool> Toggled;
 
     bool isOn;
+    public Animator anim;
 
 	public void Toggle()
     {
@@ -25,6 +26,11 @@ public class Switch : MonoBehaviour {
             {
                 Toggled(true);
             }
+        }
+
+        if (anim != null)
+        {
+            anim.SetBool("on", isOn);
         }
     }
 }

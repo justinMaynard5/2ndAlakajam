@@ -8,6 +8,7 @@ public class ToggleLight : MonoBehaviour {
     public GameObject active;
     public BlockColors color;
     public CollectedColors collectedColors;
+    public bool isMain;
 
 	// Use this for initialization
 	void Start ()
@@ -17,10 +18,24 @@ public class ToggleLight : MonoBehaviour {
 	
 	void Toggle (BlockColors inColor)
     {
-        if(inColor == color)
+        if (isMain)
         {
-            inactive.SetActive(false);
-            active.SetActive(true);
+            Debug.Log(collectedColors.Green);
+            Debug.Log(collectedColors.Red);
+            Debug.Log(collectedColors.Blue);
+            if (collectedColors.Green && collectedColors.Red && collectedColors.Blue)
+            {
+                inactive.SetActive(false);
+                active.SetActive(true);
+            }
+        }
+        else if(!isMain)
+        {
+            if (inColor == color)
+            {
+                inactive.SetActive(false);
+                active.SetActive(true);
+            }
         }
     }
 
